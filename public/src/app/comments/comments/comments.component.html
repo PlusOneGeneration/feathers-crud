@@ -1,17 +1,3 @@
-<!--<app-comment-form [comment]="comment" (savedComment)="onSave($event)"></app-comment-form>-->
-<!--<div *ngIf="comments && comments.length">-->
-  <!--<div *ngFor="let comment of comments">-->
-    <!--<div class="description">{{comment.text}}</div>-->
-    <!--<span *ngIf="post.user">created by {{comment.user.email}}</span>-->
-    <!--<br>-->
-    <!--<button (click)="remove(comment)">Remove</button>-->
-    <!--<br>-->
-    <!--<button (click)="edit(comment._id)">Edit</button>-->
-    <!--<br>-->
-  <!--</div>-->
-<!--</div>-->
-
-
 <app-comment-form [comment]="comment" (savedComment)="onSave($event)"></app-comment-form>
 <div *ngIf="comments && comments.length">
 

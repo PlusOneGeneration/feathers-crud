@@ -1,27 +1,10 @@
 
-<!--<button (click)="create()">Create new post</button>-->
-<!--<div *ngIf="posts && posts.length">-->
-  <!--<div *ngFor="let post of posts">-->
-    <!--<h1 class="title">{{post.title}}</h1>-->
-    <!--<span>created by {{post.user.email}}</span>-->
-    <!--<br>-->
-    <!--<div class="description">{{post.text}}</div>-->
-    <!--<button (click)="remove(post._id)">Remove</button>-->
-    <!--<br>-->
-    <!--<button (click)="edit(post._id)">Edit</button>-->
-    <!--<br>-->
-    <!--<button (click)="show(post._id)">Show</button>-->
-  <!--</div>-->
-<!--</div>-->
-
-<!--<div class="btn-group btn-group-justified" role="group" aria-label="...">-->
 <div>
   <button type="button" class="btn btn-default active" (click)="create()">
             <span class="glyphicon glyphicon-plus" aria-hidden="true">
             </span>
   </button>
 </div>
-<!--</div>-->
 <br>
 <div *ngIf="posts && posts.length">
   <div class="panel panel-success"*ngFor="let post of posts">
