@@ -1,0 +1,47 @@
+<!--<div *ngIf="post">-->
+  <!--<div>-->
+    <!--<form #postForm="ngForm">-->
+      <!--<br>-->
+      <!--<br>-->
+      <!--<input [(ngModel)]="post.title" placeholder="Post title" type="text" name="title" >-->
+      <!--<br>-->
+      <!--<br>-->
+      <!--<input [(ngModel)]="post.text" placeholder="Post text" type="text" name="text">-->
+      <!--<br>-->
+      <!--<button type="button" (click)="save()">Save</button>-->
+      <!--<br>-->
+      <!--<button (click)="back()">Back</button>-->
+    <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div *ngIf="post">
+  <form class="form-horizontal" #postForm="ngForm">
+    <div class="form-group">
+      <label for="inputTitle" class="col-sm-3 control-label">Title</label>
+      <div class=" col-sm-6">
+        <input class="form-control" id="inputTitle" [(ngModel)]="post.title" placeholder="Post title" type="text" name="title" >
+      </div>
+      <!--<span class=" col-sm-3 text-left text-danger" *ngIf="">{{err.message}}</span>-->
+    </div>
+    <div class="form-group">
+      <label for="inputBody" class="col-sm-3 control-label">Text</label>
+      <div class=" col-sm-6">
+        <input class="form-control" id="inputBody" [(ngModel)]="post.text" placeholder="Post text" type="text" name="text">
+      </div>
+      <span class=" col-sm-3 text-left text-danger" *ngIf="err">{{err.message}}</span>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="button" (click)="save()" class="btn btn-default">Save</button>
+        <button type="button" (click)="back()" class="btn btn-default">Back</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+
+

@@ -1,0 +1,64 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {},
+  "mongodb": "mongodb://localhost:27017/feathers_crud",
+  "authentication": {
+    "secret": "7105b8f1dd3bb58b0d479237858f4f80ec02468c1a79a9f216df017b21f890f9bbaf8145060a793bd4046a9926f071e43b6ff9a1bf9f8e631871ca3602df0bc1915bf7dfba320cfee261adb31db249b9f6ad634d43a94e3653f52424b91ab8da76dbf26c3c6c425874d405d5b937ad59bc2b78304ae9fa54925b21192710ab61b99cc8295c822f8ac2a0a964957e67b5cea4f812821e3bf73f171a31a183bd23375cb66266ce5c3ab8ff68d2b4990f9fcb3ad37d4592cdadc57b3722aa2dc3c7f58d72e30d357db29ef267dcbbcbbacd6a4bc75e1011603442947ad3a7a6d4b841881bb2d9b6d4d39896931b21beee3ea1a6ac604c31c4aa3b64afa0af67f320",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "960337276184-mcpqtv358bivgduqk14tp0vlk4asq92d.apps.googleusercontent.com",
+      "clientSecret": "MiEkrWN5ZYz0MbCgKQ34KNf2",
+      "successRedirect": "http://localhost:4200/",
+      "scope":"profile email openid"
+    },
+    "facebook": {
+      "clientID": "1921029118158656",
+      "clientSecret": "2f474ba0e591c8d85d213acd32e726cf",
+      "successRedirect": "http://localhost:4200/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  }
+}
