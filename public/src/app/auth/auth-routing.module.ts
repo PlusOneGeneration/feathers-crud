@@ -4,9 +4,7 @@ import {RegistrationComponent} from "./registration/registration.component";
 import {LoginComponent} from "./login/login.component";
 
 export const authRoutes: Routes = [
-    {
-        path: 'auth',
-        children: [
+
             {
                 path: 'registration',
                 component: RegistrationComponent
@@ -14,8 +12,8 @@ export const authRoutes: Routes = [
             {
                 path: 'login',
                 component: LoginComponent
-            }]
-    }
+            }
+
 ];
 
 @NgModule({

@@ -18,6 +18,6 @@ export class AuthService {
     logOut() {
         this.feathers.logout();
         this.userService.setUser(null);
-        this.router.navigate(['auth/login']);
+        this.router.navigate(['/login']);
     }
 }

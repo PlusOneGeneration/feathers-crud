@@ -11,7 +11,7 @@ export class UserResolver implements Resolve<User> {
     resolve(route: ActivatedRouteSnapshot): Promise<User> {
         return this.userService.getUser()
             .catch(err => {
-                this.router.navigate(['auth/login']);
+                this.router.navigate(['/login']);
             });
     }
 }
