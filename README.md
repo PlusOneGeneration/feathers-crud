@@ -52,6 +52,6 @@ __0.1.0__
 
 ## License
 
-Copyright (c) 2016
+Copyright (c) 2016 Plus One Generation [+1G]
 
 Licensed under the [MIT license](LICENSE).
